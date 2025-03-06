@@ -1,0 +1,43 @@
+{
+	"info": {
+		"_postman_id": "11a3bf0c-4140-43d7-b23c-3549cb615a81",
+		"name": "detected_events",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30527459"
+	},
+	"item": [
+		{
+			"name": "getEvents",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/events?pageSize=1&object_type=truck",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"events"
+					],
+					"query": [
+						{
+							"key": "pageSize",
+							"value": "1"
+						},
+						{
+							"key": "pageState",
+							"value": "d407e3e0-456b-4d3e-8554-3f4d741d213d",
+							"disabled": true
+						},
+						{
+							"key": "object_type",
+							"value": "truck"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
