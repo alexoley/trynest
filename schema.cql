@@ -4,7 +4,7 @@ CREATE KEYSPACE detection
    'replication_factor' : 1 
   };
 
-CREATE TABLE event (
+CREATE TABLE detection.event (
    unique_id uuid PRIMARY KEY,
    source uuid,
    latitude float,
@@ -15,10 +15,10 @@ CREATE TABLE event (
 );
 
 -- Create the index
-CREATE INDEX event_object_type_idx ON event (object_type);
+CREATE INDEX event_object_type_idx ON detection.event (object_type);
 
 
-INSERT INTO event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
+INSERT INTO detection.event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
 VALUES (
    uuid(),
    uuid(),
@@ -29,7 +29,7 @@ VALUES (
    toTimestamp(now())
 );
 
-INSERT INTO event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
+INSERT INTO detection.event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
 VALUES (
    uuid(),
    uuid(),
@@ -40,7 +40,7 @@ VALUES (
    '2023-10-03 09:45:30'
 );
 
-INSERT INTO event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
+INSERT INTO detection.event (unique_id, source, latitude, longitude, object_type, confidence, created_at)
 VALUES (
    uuid(),
    uuid(),
